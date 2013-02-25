@@ -9,6 +9,27 @@ our $VERSION = '0.01';
 RT-Extension-NotifyBasedOnOwnership - Adds scrip conditions and actions useful
 for suppressing notifications to queue watchers when a ticket becomes owned
 
+=head1 DESCRIPTION
+
+A typical use of these conditions and actions is to add scrips like the
+following:
+
+    On Correspond and Unowned Notify AdminCcs
+    On Correspond and Unowned Notify Requestors and Ccs
+
+    On Correspond and Owned Notify Owner and Ticket AdminCcs
+    On Correspond and Owned Notify Requestors and Ticket Ccs
+
+    On Comment and Unowned Notify AdminCcs as Comment
+    On Comment and Owned Notify Owner and Ticket AdminCcs as Comment
+
+If you add the above, you'll want to replace or disable the stock On Correspond
+and On Comment scrips targetting Requestors, Owners, Ccs, and AdminCcs.
+Otherwise, RT will send multiple notifications.
+
+Be sure to leave the standard scrips in place which notify "Other Recipients"
+so that "One-time Ccs" and "One-time BCcs" still work correctly.
+
 =head1 INSTALLATION
 
 =over
