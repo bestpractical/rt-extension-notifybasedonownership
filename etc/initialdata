@@ -1,9 +1,21 @@
 use strict;
 use warnings;
 
-# Owner-dependent On Correspond/Comment conditions
+# Owner-dependent On Create/Correspond/Comment conditions
 our @ScripConditions = (
     {
+        Name                 => 'On Create and Unowned',
+        Description          => 'When a ticket is created owned by Nobody',
+        ApplicableTransTypes => 'Create',
+        ExecModule           => 'Owner',
+        Argument             => 'Nobody',
+    }, {
+        Name                 => 'On Create and Owned',
+        Description          => 'When a ticket is created with an owner',
+        ApplicableTransTypes => 'Create',
+        ExecModule           => 'Owner',
+        Argument             => '*',
+    }, {
         Name                 => 'On Correspond and Unowned',
         Description          => 'Whenever correspondence comes in on a ticket owned by Nobody',
         ApplicableTransTypes => 'Correspond',
