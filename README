@@ -3,6 +3,23 @@ NAME
     useful for suppressing notifications to queue watchers when a ticket
     becomes owned
 
+SYNOPSIS
+    Adds the following conditions to RT:
+
+    On Create and Unowned
+    On Create and Owned
+    On Correspond and Unowned
+    On Correspond and Owned
+    On Comment and Unowned
+    On Comment and Owned
+
+    Adds the following actions to RT:
+
+    Notify Requestors and Ticket Ccs
+    Notify Owner and Ticket AdminCcs
+    Notify Requestors and Ticket Ccs as Comment
+    Notify Owner and Ticket AdminCcs as Comment
+
 DESCRIPTION
     A typical use of these conditions and actions is to add scrips like the
     following:

@@ -9,6 +9,40 @@ our $VERSION = '0.01';
 RT-Extension-NotifyBasedOnOwnership - Adds scrip conditions and actions useful
 for suppressing notifications to queue watchers when a ticket becomes owned
 
+=head1 SYNOPSIS
+
+Adds the following conditions to RT:
+
+=over
+
+=item On Create and Unowned
+
+=item On Create and Owned
+
+=item On Correspond and Unowned
+
+=item On Correspond and Owned
+
+=item On Comment and Unowned
+
+=item On Comment and Owned
+
+=back
+
+Adds the following actions to RT:
+
+=over
+
+=item Notify Requestors and Ticket Ccs
+
+=item Notify Owner and Ticket AdminCcs
+
+=item Notify Requestors and Ticket Ccs as Comment
+
+=item Notify Owner and Ticket AdminCcs as Comment
+
+=back
+
 =head1 DESCRIPTION
 
 A typical use of these conditions and actions is to add scrips like the
